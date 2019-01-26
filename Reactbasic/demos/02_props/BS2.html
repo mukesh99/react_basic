@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>React - Template</title>
+    <link rel="stylesheet" type="text/css" href="./css/main.css">
+    <script src="../../js/react.min.js"></script>
+    <script src="../../js/react-dom.min.js"></script>
+    <script src="../../js/browser.min.js"></script>
+</head>
+<body>
+
+    <div id="container"></div>
+
+    <script type="text/babel">
+	var Header = React.createClass({
+		render(){
+			let compdtl = this.props.mtdtl;
+			compdtl = compdtl.map(function(item){
+			return(
+				<li>{item}</li>
+			)
+			});
+			//console.log(compdtl);
+				return(
+						<ul>
+							<li>{/*this.props.mtdtl[0]*/}</li>
+							<li>{/*compdtl[0]*/}</li>
+							
+							{compdtl}
+						</ul>
+					)
+		}
+	});
+	let mydetail=["mukesh", 32, "Bangalore"]
+	
+	ReactDOM.render(<Header name="Mukesh" mtdtl={mydetail}/>, document.getElementById('container'));
+	
+	/*var Header = React.createClass({
+		render(){
+				return(
+						<ul>
+							<li>{this.props.name}</li>
+							<li>{this.props.mtdtl.name}</li>
+							<li>{this.props.mtdtl.age}</li>
+							<li>{this.props.mtdtl.location}</li>
+						</ul>
+					)
+		}
+	});
+	let mydetail={
+	name:"Mukesh",
+	age:32,
+	location:'Bangalore'
+	}
+	
+	ReactDOM.render(<Header name="Mukesh" mtdtl={mydetail}/>, document.getElementById('container'));
+	
+	*/
+    </script>
+
+</body>
+</html>

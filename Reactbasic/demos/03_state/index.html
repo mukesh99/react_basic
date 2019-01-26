@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>React - Template</title>
+    <link rel="stylesheet" type="text/css" href="./css/main.css">
+    <script src="../../js/react.min.js"></script>
+    <script src="../../js/react-dom.min.js"></script>
+    <script src="../../js/browser.min.js"></script>
+</head>
+<body>
+
+    <div id="container"></div>
+
+    <script type="text/babel">
+	var Movie = React.createClass({
+		getInitialState() {
+			return { name:['mukesh', 'suresh', 'kumar']};
+			},
+			
+			render:function(){
+				return(<div>
+				<ul>
+					<li>{this.state.name[0]}</li>
+					<li>{this.state.name[1]}</li>
+					<li>{this.state.name[2]}</li>
+				</ul>
+				</div>)
+			}
+	});
+	ReactDOM.render(
+	<Movie/>,
+	document.getElementById('container')
+	);
+    </script>
+
+</body>
+</html>

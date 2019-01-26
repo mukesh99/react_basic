@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>React - Template</title>
+    <link rel="stylesheet" type="text/css" href="./css/main.css">
+    <script src="../../js/react.min.js"></script>
+    <script src="../../js/react-dom.min.js"></script>
+    <script src="../../js/browser.min.js"></script>
+</head>
+<body>
+
+    <div id="container"></div>
+
+    <script type="text/babel">
+	
+	class Helloworld extends React.Component
+	{
+		render()
+		{
+			return(
+					<div>
+						<ul>
+							<li>{this.props.mydtl.name}</li>
+							<li>{this.props.mydtl.age}</li>
+							<li>{this.props.mydtl.location}</li>
+						</ul>
+					</div>
+			)
+		}
+	}
+	let mydetail ={
+	name:"Mukesh",
+	age:32,
+	location:"Banagalore"
+	}
+	ReactDOM.render(<Helloworld name="Mukesh" mydtl ={mydetail}/>, document.getElementById("container"));
+	
+	
+	
+	
+	
+	/*let Helloword = React.createClass({
+	render:function()
+	{
+		return(
+		<h1>Hello Worlld</h1>
+		)
+	}
+	
+	});
+	ReactDOM.render(<Helloword/>, document.getElementById("container"));
+	*/
+	
+	//ReactDOM.render(React.createElement('h1', 'null', 'Hello World'), document.getElementById('container')); 
+	/* create Element method null is important becouse constructor need to write*/
+	//ReactDOM.render(<h1>Hello Wordl</h1>, document.getElementById("container"));	
+    </script>
+
+</body>
+</html>

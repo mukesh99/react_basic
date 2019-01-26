@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>React - Template</title>
+    <link rel="stylesheet" type="text/css" href="./css/main.css">
+    <script src="../../js/react.min.js"></script>
+    <script src="../../js/react-dom.min.js"></script>
+    <script src="../../js/browser.min.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+    <div id="container"></div>
+
+    <script type="text/babel">
+	
+	var Movie = React.createClass({
+		edit:function()
+		{
+		alert('we clicked Edit');
+		},
+		remove:function()
+		{
+		alert('we clicked Removed');
+		},
+	
+		render:function()
+		{
+		return(
+			<div className="container1">
+			{this.props.children}
+			<button onClick={this.edit} className="btn-primary">Edit</button>
+			<button onClick={this.remove}className="btn-danger">Remove</button>
+			</div>
+		)
+		}
+	})
+	
+		ReactDOM.render(
+		<div>
+		<Movie name="hello">My name is Mukesh</Movie>
+		<Movie>My name is Kumar</Movie>
+		<Movie>My name is Singh</Movie>
+		</div>
+		, document.getElementById('container'))
+    </script>
+
+</body>
+</html>

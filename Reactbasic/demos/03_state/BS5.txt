@@ -1,0 +1,49 @@
+
+import React, { Component } from 'react';
+
+	class Movie extends Component{
+	constructor(props) {
+    super();
+    this.state = {
+	user:[{name:'Mukesh', age:32},
+			{name:'Bhola',age:42},
+				{name:"Sunder",age:52},
+	]};
+  }
+  handle = () => {
+  console.log('inside');
+	/*this.setState({
+  user:[{name:'Mukesh', age:22},
+			{name:'Bhola',age:32},
+				{name:"Sunder",age:42},
+	]
+
+  })
+	*/
+	const newState = this.state.user.map((user)=>{
+		const tempuser = user;
+		tempuser.age -=10;
+		return tempuser;
+
+	});
+			this.setState({
+				newState
+
+		});
+  }
+		render()
+		{
+		return(
+			<div id="container">
+				<button onClick={this.handle}>Click me to change Age</button>
+
+			<ul>
+				<li>{this.state.user[0].name} {this.state.user[0].age}</li><br/>
+				<li>{this.state.user[1].name} {this.state.user[1].age}</li><br/>
+				<li>{this.state.user[2].name} {this.state.user[2].age}</li><br/>
+			</ul>
+			</div>
+		)
+		}
+	}
+export default Movie;

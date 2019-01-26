@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>React - Template</title>
+    <link rel="stylesheet" type="text/css" href="./css/main.css">
+    <script src="../../js/react.min.js"></script>
+    <script src="../../js/react-dom.min.js"></script>
+    <script src="../../js/browser.min.js"></script>
+</head>
+<body>
+
+    <div id="container"></div>
+
+    <script type="text/babel">
+	const Header = React.createClass({
+	clicked:function()
+		{
+			alert('this function has been clicked')
+		},
+		render:function()
+		{
+			return(
+			<div className="container">
+				<a onClick={this.clicked}>Click me</a>
+			</div>
+			)
+		},
+		
+		
+	})
+      
+ReactDOM.render(
+<Header/>, 
+document.getElementById('container'))
+
+
+    </script>
+
+</body>
+</html>

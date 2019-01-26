@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>React - Template</title>
+    <link rel="stylesheet" type="text/css" href="./css/main.css">
+    <script src="../../js/react.min.js"></script>
+    <script src="../../js/react-dom.min.js"></script>
+    <script src="../../js/browser.min.js"></script>
+</head>
+<body>
+
+    <div id="container"></div>
+
+    <script type="text/babel">
+		class Header extends React.Component{
+			render(){
+				return(
+				<div>This is new method to display data</div>
+				)
+			}
+		}
+		ReactDOM.render(<Header/>,document.getElementById('container'));
+	
+		/*var Header = React.createClass({
+			render:function()
+			{
+				return(
+				<h1> This is third basic method </h1>
+				)
+			}
+		})
+	ReactDOM.render(<div><Header/></div>,document.getElementById('container')); */
+	
+	
+	
+	//ReactDOM.render(React.createElement('h1', 'null', 'Hello World'), document.getElementById('container')); 
+	/* create Element method null is important becouse constructor need to write*/
+	//ReactDOM.render(<h1>Hello World</h1>, document.getElementById("container")); /* Basic statement*/
+	
+    </script>
+
+</body>
+</html>

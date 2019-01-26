@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>React - Template</title>
+    <link rel="stylesheet" type="text/css" href="./css/main.css">
+    <script src="../../js/react.min.js"></script>
+    <script src="../../js/react-dom.min.js"></script>
+    <script src="../../js/browser.min.js"></script>
+</head>
+<body>
+    <div id="container"></div>
+	<button onClick={this.handle()}>Click me to change Age</button>
+    <script type="text/babel">
+	class Movie extends React.Component{
+	constructor(props) { 
+    super();
+    this.state = {
+	user:[{name:'Mukesh', age:32},
+			{name:'Bhola',age:42},
+				{name:"Sunder",location:"bangalore"},
+	]};
+  }
+  handle =()=>{
+  this.setState({
+  [{name:'Mukesh', age:22},
+			{name:'Bhola',age:32},
+				{name:"Sunder",location:"bangalore"},
+	]
+  
+  })
+  }
+	
+		render()
+		{
+		return(
+			<ul>
+				<li>{this.state.user[0].name}{this.state.user[0].age}</li>
+				<li>{this.state.user[1].name}{this.state.user[1].age}</li>
+				<li>{this.state.user[2].name}{this.state.user[2].age}</li>
+			</ul>
+		)
+		}
+	}
+	ReactDOM.render(<Movie/>, document.getElementById("container"));
+    </script>
+
+</body>
+</html>

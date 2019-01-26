@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>React - Template</title>
+    <link rel="stylesheet" type="text/css" href="./css/main.css">
+    <script src="../../js/react.min.js"></script>
+    <script src="../../js/react-dom.min.js"></script>
+    <script src="../../js/browser.min.js"></script>
+</head>
+<body>
+<style>
+.name{font-weight:bold; font-size:34px;}
+</style>
+    <div id="container"></div>
+
+    <script type="text/babel">
+	
+	var Movie = React.createClass({
+		getInitialState() {
+			return { 
+			name:'mukesh',
+			age:32,
+			location:'Bangalore'
+			};
+			},
+			
+			render:function(){
+				return(<div>
+				<ul>
+					<li>{this.state.name}</li>
+					<li>My age is {this.state.age}</li>
+					<li>{this.state.location}</li>
+					
+				</ul>
+				</div>)
+			}
+	});
+	ReactDOM.render(<Movie/>,document.getElementById('container'));
+    </script>
+
+</body>
+</html>

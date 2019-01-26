@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>React - Template</title>
+    <link rel="stylesheet" type="text/css" href="./css/main.css">
+    <script src="../../js/react.min.js"></script>
+    <script src="../../js/react-dom.min.js"></script>
+    <script src="../../js/browser.min.js"></script>
+</head>
+<body>
+
+    <div id="container"></div>
+
+    <script type="text/babel">
+	var Checkbox = React.createClass({
+		getInitialState() {
+			return {name:['raman', 'deepak', 'kumar', 'pankaj','test'] };
+			},
+			
+			render:function(){
+			var name = this.state.name;
+			name = name.map(function(item, index){
+				return(
+				<li>{item}</li>
+				);
+			
+			});
+			
+			return(<ul>
+			{name}
+			</ul>)
+			}
+	});
+	ReactDOM.render(
+	<Checkbox/>,
+	document.getElementById('container')
+	);
+    </script>
+
+</body>
+</html>

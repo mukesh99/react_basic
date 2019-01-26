@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>React - Template</title>
+    <link rel="stylesheet" type="text/css" href="./css/main.css">
+    <script src="../../js/react.min.js"></script>
+    <script src="../../js/react-dom.min.js"></script>
+    <script src="../../js/browser.min.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+    <div id="container"></div>
+
+    <script type="text/babel">
+        var Myproject = React.createClass({
+		edit:function()
+		{
+			alert('Edit Clicked');
+		},
+		remove:function()
+		{
+			alert('Remove Clicked');
+		},
+			render:function()
+			{
+				return(
+					<div className='container1'>{this.props.children}
+						<button className="btn-primary" onClick={this.edit}>Edit</button>
+						<button className="btn-danger" onClick={this.remove}>Remove</button>
+					</div>
+				)
+			}
+		})
+		
+		ReactDOM.render(
+		<div className="">
+		<Myproject> Hey My name is mukesh</Myproject>
+		<Myproject> Hey My name is Kumar</Myproject>
+		<Myproject> Hey My name is Singh</Myproject>
+		</div>
+		, document.getElementById('container'))
+    </script>
+
+</body>
+</html>
